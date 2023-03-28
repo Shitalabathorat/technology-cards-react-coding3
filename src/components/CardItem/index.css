@@ -21,3 +21,13 @@
 .para {
   color: #64748b;
 }
+.img-container {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  text-align: end;
+}
+.avtar {
+  width: 100px;
+  height: 100px;
+}

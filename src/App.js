@@ -1,3 +1,4 @@
+import {Component} from 'react'
 import UserProfile from './Components/CardItem'
 import './App.css'
 
@@ -36,16 +37,20 @@ const cardsList = [
   },
 ]
 
-const App = () => (
-  <div>
-    <h1 className="heading">Learn 4.o Technologies</h1>
-    <p className="para">xaidnp..............</p>
-    <ul className="ul-list">
-      {cardsList.map(eachItem => (
-        <UserProfile userDetails={eachItem} key={eachItem.id} />
-      ))}
-    </ul>
-  </div>
-)
+class App extends Component {
+  render() {
+    return (
+      <div className="app-container">
+        <h1 className="heading">Learn 4.o Technologies</h1>
+        <p className="para">xaidnp..............</p>
+        <ul className="ul-list">
+          {cardsList.map(eachUser => (
+            <UserProfile userDetails={eachUser} key={eachUser.id} />
+          ))}
+        </ul>
+      </div>
+    )
+  }
+}
 
 export default App
