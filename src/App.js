@@ -1,4 +1,6 @@
-import CardItem from './Components/CardItem'
+
+
+import CardItem from './components/CardItem'
 import './App.css'
 
 const cardsList = [
@@ -39,10 +41,14 @@ const cardsList = [
 const App = () => (
   <div className="app-container">
     <h1 className="heading">Learn 4.o Technologies</h1>
-    <p className="para">Get trained by alumni by IITs and top componies like Amazon,...</p>
-    <ul className="ul-list">
+    <p className="para">
+      Get trained by alumni of IITs and top companies like Amazon,
+      Microsoft,Intel, Nvidia, Qualcomm,etc Learn directly from professionals
+      involved in Product Development
+    </p>
+    <ul className="list-container">
       {cardsList.map(eachItem => (
-        <CardItem userDetails={eachItem} key={eachItem.id} />
+        <CardItem userDetails={eachItem} Key={eachItem.id} />
       ))}
     </ul>
   </div>
