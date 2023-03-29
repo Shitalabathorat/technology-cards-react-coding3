@@ -1,5 +1,4 @@
-import {Component} from 'react'
-import '.index.css'
+import './index.css'
 
 const CardItem = props => {
   const {userDetails, key} = props
@@ -7,15 +6,10 @@ const CardItem = props => {
 
   return (
     <li className={className}>
-      <div className="container">
-        <h2 className="heading">{title}</h2>
-        <p className="para">{description}</p>
-        <div className="img-container">
-          <img src={imgUrl} className="avtar" alt="avtar" />
-        </div>
-      </div>
+      <h1 className="heading">{title}</h1>
+      <p className="para">{description}</p>
+      <img src={imgUrl} className="avtar" alt={title} />
     </li>
   )
 }
-
 export default CardItem
